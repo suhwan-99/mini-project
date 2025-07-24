@@ -1,13 +1,15 @@
-import bg from '../../public/bg.jpg'
+import { useState } from 'react';
 import Place from './place';
+import Carousel from './Carousel';
 function MainPage() {
+
   return(
     <>
-    <div className="Main-bg" style={{backgroundImage: 'url('+ bg +')', height: '400px', backgroundSize: 'cover'}}></div>
+      <Carousel />
       <br />
-      <div className='container'>
+      <div className='container' >
         <div className='row'>
-          <Place />
+            <Place />
         </div>
       </div>
     </>
