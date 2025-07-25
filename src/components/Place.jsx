@@ -2,12 +2,18 @@ import { useNavigate } from 'react-router-dom';
 import PlaceData from '../../PlaceData';
 import './place.css';
 import { useState } from 'react';
-function Place() {
+function Place({iconId, setIconId}) {
   const navigate = useNavigate();
   const data = PlaceData;
-  const [iconColor, setIconColor] = useState('#171616');
   const changeColor = (id) => {
-      setIconColor(id)
+
+    if(iconId.includes(id)) {
+      let _iconId = [...iconId]
+      let index = _iconId.findIndex((data) => data === id)
+      _iconId.splice(index, 1)
+      setIconId(_iconId)
+    } else
+      setIconId([...iconId, id])
   };
 
   return(
@@ -19,7 +25,9 @@ function Place() {
           
           return(
             <>
-            <div className="inPlace" key={i} >
+            <div className="inPlace" key={i} onClick={() => {
+              navigate('/detail/' + imp);
+            }}>
               <img src= {`../../public/MainImage/${data.title}.jpg`} alt=""/>
               <h3>{data.title}</h3>
               <p>
@@ -27,15 +35,16 @@ function Place() {
                 i < 6 ? 'best!' : ''
               }
               <div className='star'>
-              <i class="fa-regular fa-star" onClick={() => changeColor(imp)} style={{color: iconColor === imp ? 'yellow' : '#171616' }}></i>
+              <i class="fa-regular fa-star" onClick={(e) => {
+                e.stopPropagation();
+                changeColor(imp);
+                }} style={{color: iconId.includes(imp) ? 'yellow' : '#171616' }}></i>
               </div>
               </p>
             </div>
             </>
           )
         })
-              // 하나씩 색이 바뀌는건 적용 , but 여러개를 색상 변경하는건 불가능함
-              // 이 부분을 고쳐야됨
       }
     </div>
   )

@@ -1,0 +1,43 @@
+import Place from './place';
+import './place.css'
+import PlaceData from "../../PlaceData";
+import { useState } from 'react';
+import Carousel from './Carousel';
+
+
+function Favorite({iconId, setIconId}) {
+
+  return(
+    <>
+      <Carousel />
+      <br />
+      <div className='favoriteHeader'> 
+        <div>즐 겨 찾 기 한 여 행 지</div>
+      </div>
+      <div className='container_'>
+        {
+          iconId.map((list, i) => {
+
+            return (
+              <>
+              <div>
+                <div className="inPlace " key={i} >
+                  <img src= {`../../public/MainImage/${PlaceData[list].title}.jpg`} alt=""/>
+                  <h3>{PlaceData[list].title}</h3>
+                <button className='star_' onClick={() => {
+                    let iconId_ =[...iconId];
+                    iconId_.splice(i, 1);
+                    setIconId(iconId_)
+  
+                }}>X</button>
+                </div>
+              </div>
+            </>
+            )})   
+        }
+      </div>
+    
+    </>
+  )
+}
+export default Favorite;

@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import Place from './place';
 import Carousel from './Carousel';
-function MainPage() {
+function MainPage({iconId, setIconId}) {
 
   return(
     <>
       <Carousel />
-      <br />
+      <div className='bar'></div>
       <div className='container' >
         <div className='row'>
-            <Place />
+            <Place iconId={iconId} setIconId={setIconId}/>
         </div>
       </div>
     </>

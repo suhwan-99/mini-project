@@ -38,3 +38,26 @@ i{
 .star i {
   color: rgb(17, 16, 16);
 }
+
+.container_ {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  margin-top: 50px;
+  place-items: center;
+  gap: 100px; 
+}
+.favoriteHeader{
+  background-color: darkgray;
+  height: 100px;
+}
+.favoriteHeader div {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.star_{
+  border-radius: 5px;
+  background-color: white;
+  width: 30px;
+}

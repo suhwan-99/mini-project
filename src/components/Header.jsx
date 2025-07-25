@@ -11,9 +11,9 @@ function Header() {
     <Container>
       <Navbar.Brand onClick={() => navigate('/')}><i class="fa-solid fa-plane-departure"></i>여행 다이어리</Navbar.Brand>
       <Nav className="me-auto">
-         <Nav.Link href="#home">추천 여행지</Nav.Link>
-         <Nav.Link href="#features">즐겨찾기</Nav.Link>
-         <Nav.Link href="#pricing">이름</Nav.Link>
+         <Nav.Link>추천 여행지</Nav.Link>
+         <Nav.Link onClick={() => navigate('/favorite')}>즐겨찾기</Nav.Link>
+         <Nav.Link>이름</Nav.Link>
       </Nav>
        <Form className="d-flex">
             <Form.Control
