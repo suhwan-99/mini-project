@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Place from './place';
+
+import Place from './Place';
 import Carousel from './Carousel';
 function MainPage({iconId, setIconId}) {
 
