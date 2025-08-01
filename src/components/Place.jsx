@@ -27,7 +27,7 @@ function Place({iconId, setIconId}) {
             <div className="inPlace" key={i} onClick={() => {
               navigate('/detail/' + imp);
             }}>
-              <img src= {`../../public/MainImage/${data.title}.jpg`} alt=""/>
+              <img src= {`${import.meta.env.BASE_URL}MainImage/${data.title}.jpg`} alt=""/>
               <h3>{data.title}</h3>
               <p className='best'>
               {

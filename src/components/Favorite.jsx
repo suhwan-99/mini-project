@@ -25,7 +25,7 @@ function Favorite({iconId, setIconId}) {
                 <div className="inPlace " key={i} onClick={() => {
                   navigate('/detail/' + iconId[i]);
                 }}>
-                  <img src= {`../../public/MainImage/${PlaceData[list].title}.jpg`} alt=""/>
+                  <img src= {`${import.meta.env.BASE_URL}MainImage/${PlaceData[list].title}.jpg`} alt=""/>
                   <h3>{PlaceData[list].title}</h3>
                 <button className='star_' onClick={(e) => {
                      e.stopPropagation();

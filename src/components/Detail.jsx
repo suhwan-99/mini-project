@@ -38,7 +38,7 @@ function Detail({iconId}) {
   return(
     <div>
       <div className="inPlace" style={{margin: '1rem 0px 0px 3rem'}}>
-        <img src={`../../public/MainImage/${data[id].title}.jpg`} alt="" />
+        <img src={`${import.meta.env.BASE_URL}MainImage/${data[id].title}.jpg`} alt="" />
         <h3>{data[id].title}</h3>
       </div>
       <div className="contentbox">

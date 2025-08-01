@@ -4,13 +4,13 @@ function Carousel() {
   <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" style={{width:'65%',  height: '500px', margin:'auto'}}>
     <div className="carousel-inner" >
       <div className="carousel-item active">
-        <img src="../../public/MainImage/bg.jpg" className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
+        <img src={`${import.meta.env.BASE_URL}MainImage/bg.jpg`} className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
       </div>
       <div className="carousel-item">
-        <img src="../../public/MainImage/bg2.jpg" className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
+        <img src={`${import.meta.env.BASE_URL}MainImage/bg2.jpg`} className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
       </div>
       <div className="carousel-item">
-        <img src="../../public/MainImage/bg3.jpg" className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
+        <img src={`${import.meta.env.BASE_URL}MainImage/bg3.jpg`} className="d-block w-100" alt="..." style={{height: '500px', objectFit: 'cover' }}/>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
