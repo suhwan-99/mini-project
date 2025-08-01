@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Favorite from './components/Favorite';
 import Detail from './components/Detail';
-
+import Login from './components/Login';
 function App() {
   const [iconId, setIconId] = useState([]);
   useEffect(() => {
@@ -22,16 +22,18 @@ function App() {
   
   
   return (
-    <>
+    <div className='app'>
     <Header />
 
+    
     <Routes>
-      {/* <Route path='/datail' element={<Detail iconId={iconId}/>} /> */}
+      <Route path='/login' element={<Login />}/>
+      <Route path='/detail/:id' element={<Detail iconId={iconId}/>} />
       <Route path='/' element={<MainPage iconId={iconId} setIconId={setIconId}/>} />
       <Route path='/favorite' element={<Favorite iconId={iconId} setIconId={setIconId}/>} />
     </Routes>
     
-    </>
+    </div>
   )
 }
 

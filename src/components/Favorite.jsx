@@ -3,10 +3,11 @@ import './place.css'
 import PlaceData from "../../PlaceData";
 import { useState } from 'react';
 import Carousel from './Carousel';
+import { useNavigate } from 'react-router-dom';
 
 
 function Favorite({iconId, setIconId}) {
-
+  const navigate = useNavigate();
   return(
     <>
       <Carousel />
@@ -21,15 +22,17 @@ function Favorite({iconId, setIconId}) {
             return (
               <>
               <div>
-                <div className="inPlace " key={i} >
+                <div className="inPlace " key={i} onClick={() => {
+                  navigate('/detail/' + iconId[i]);
+                }}>
                   <img src= {`../../public/MainImage/${PlaceData[list].title}.jpg`} alt=""/>
                   <h3>{PlaceData[list].title}</h3>
-                <button className='star_' onClick={() => {
+                <button className='star_' onClick={(e) => {
+                     e.stopPropagation();
                     let iconId_ =[...iconId];
                     iconId_.splice(i, 1);
                     setIconId(iconId_)
-  
-                }}>X</button>
+                  }}>X</button>
                 </div>
               </div>
             </>

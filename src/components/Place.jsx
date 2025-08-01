@@ -30,15 +30,15 @@ function Place({iconId, setIconId}) {
             }}>
               <img src= {`../../public/MainImage/${data.title}.jpg`} alt=""/>
               <h3>{data.title}</h3>
-              <p>
+              <p className='best'>
               {
-                i < 6 ? 'best!' : ''
+                i < 3 ? 'best!' : ''
               }
-              <div className='star'>
-              <i class="fa-regular fa-star" onClick={(e) => {
+              <div className='star' onClick={(e) => {
                 e.stopPropagation();
                 changeColor(imp);
-                }} style={{color: iconId.includes(imp) ? 'yellow' : '#171616' }}></i>
+              }}>
+              <i class="fa-regular fa-star"style={{color: iconId.includes(imp) ? 'yellow' : '#171616' }}></i>
               </div>
               </p>
             </div>
