@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import PlaceData from '../../PlaceData';
-import './place.css';
-import { useState } from 'react';
+import './Place.css';
 function Place({iconId, setIconId}) {
   const navigate = useNavigate();
   const data = PlaceData;

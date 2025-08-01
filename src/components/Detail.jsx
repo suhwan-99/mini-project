@@ -1,12 +1,10 @@
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PlaceData from "../../PlaceData";
-import './place.css';
-import Carousel from "./Carousel";
+import './Place.css';
 import { useEffect, useState } from "react";
 function Detail({iconId}) {
   const {id} = useParams();
   const data = PlaceData;
-  const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
   const [inputText, setInputText] = useState('');
 
