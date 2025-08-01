@@ -1,0 +1,24 @@
+.bar {
+  height: 1rem;
+  background-color: darkgray;
+  margin-top: 5px;
+}
+body {
+  background-color: rgb(255, 239, 220)
+}
+.app {
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .app{
+    max-width: 90%;
+    padding: 30px;
+  };
+  
+}
+@media (max-width: 768px) {
+  .app{
+    max-width: 100%;
+    padding: 20px;
+  }
+}
