@@ -1,7 +1,7 @@
-import Place from './place';
-import './place.css'
+
+import './Place.css'
 import PlaceData from "../../PlaceData";
-import { useState } from 'react';
+
 import Carousel from './Carousel';
 import { useNavigate } from 'react-router-dom';
 
